@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redColorView: UIView!
     @IBOutlet var yellowColorView: UIView!
     @IBOutlet var greenColorView: UIView!
@@ -19,12 +19,11 @@ class ViewController: UIViewController {
         
         let views:[UIView] = [redColorView, yellowColorView, greenColorView]
         
-     //   views.map({ $0.layer.cornerRadius = 60 }) - Почему-то возникает ошибка "Result of call to 'map' is unused"
+        //   views.map({ $0.layer.cornerRadius = 60 }) - Почему-то возникает ошибка "Result of call to 'map' is unused"
         
-                for view in views {
-                    view.layer.cornerRadius = 60
-                }
-        
+        for view in views {
+            view.layer.cornerRadius = 60
+        }
         button.layer.cornerRadius = 10
     }
     
@@ -57,6 +56,5 @@ class ViewController: UIViewController {
             switchStatus(redColorView)
         }
     }
-    
 }
 
