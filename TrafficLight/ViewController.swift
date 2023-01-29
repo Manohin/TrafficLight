@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         //   views.map({ $0.layer.cornerRadius = 60 }) - Почему-то возникает ошибка "Result of call to 'map' is unused"
         for view in views {
             view.layer.cornerRadius = 60
+            view.alpha = 0.3
         }
         button.layer.cornerRadius = 10
     }
