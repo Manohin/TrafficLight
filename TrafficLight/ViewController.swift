@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     var isLighted = false
     
-    func switchStatus(_ view: UIView) {
+    private func switchStatus(_ view: UIView) {
         if view.alpha != 1 {
             view.alpha = 1
             isLighted = true
