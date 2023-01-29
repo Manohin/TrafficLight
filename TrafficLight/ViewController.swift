@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         functionalButton.layer.cornerRadius = 10
     }
     
-    private func switchStatus(_ view: UIView) {
+    private func toggleStatus(_ view: UIView) {
         if view.alpha != 1 {
             view.alpha = 1
             isLighted = true
@@ -42,17 +42,17 @@ class ViewController: UIViewController {
     @IBAction func functionalButtonTapped() {
         
         if functionalButton.currentTitle == "START" {
-            switchStatus(redColorView)
+            toggleStatus(redColorView)
             functionalButton.setTitle("NEXT", for: .normal)
         } else if redColorView.alpha == 1 && isLighted == true {
-            switchStatus(redColorView)
-            switchStatus(yellowColorView)
+            toggleStatus(redColorView)
+            toggleStatus(yellowColorView)
         } else if yellowColorView.alpha == 1 && isLighted == true {
-            switchStatus(yellowColorView)
-            switchStatus(greenColorView)
+            toggleStatus(yellowColorView)
+            toggleStatus(greenColorView)
         } else {
-            switchStatus(greenColorView)
-            switchStatus(redColorView)
+            toggleStatus(greenColorView)
+            toggleStatus(redColorView)
         }
     }
 }
