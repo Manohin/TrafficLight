@@ -7,6 +7,8 @@
 
 import UIKit
 
+var isLighted = false
+
 class ViewController: UIViewController {
     
     @IBOutlet var redColorView: UIView!
@@ -26,8 +28,6 @@ class ViewController: UIViewController {
         }
         functionalButton.layer.cornerRadius = 10
     }
-    
-    var isLighted = false
     
     private func switchStatus(_ view: UIView) {
         if view.alpha != 1 {
