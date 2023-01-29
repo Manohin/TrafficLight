@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var redColorView: UIView!
     @IBOutlet var yellowColorView: UIView!
     @IBOutlet var greenColorView: UIView!
-    @IBOutlet var button: UIButton!
+    @IBOutlet var functionalButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             view.layer.cornerRadius = 60
             view.alpha = 0.3
         }
-        button.layer.cornerRadius = 10
+        functionalButton.layer.cornerRadius = 10
     }
     
     var isLighted = false
@@ -39,11 +39,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func functionalButton() {
+    @IBAction func functionalButtonTapped() {
         
-        if button.currentTitle == "START" {
+        if functionalButton.currentTitle == "START" {
             switchStatus(redColorView)
-            button.setTitle("NEXT", for: .normal)
+            functionalButton.setTitle("NEXT", for: .normal)
         } else if redColorView.alpha == 1 && isLighted == true {
             switchStatus(redColorView)
             switchStatus(yellowColorView)
