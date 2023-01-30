@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet var colorViews: [UIView]!
     @IBOutlet var functionalButton: UIButton!
     
