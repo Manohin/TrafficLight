@@ -72,9 +72,9 @@
                     </view>
                     <connections>
                         <outlet property="functionalButton" destination="Qbr-3v-8Z0" id="NIg-CT-gSM"/>
-                        <outlet property="greenColorView" destination="vCA-f6-QoI" id="8Zb-Y6-JVW"/>
-                        <outlet property="redColorView" destination="MOz-uS-tFU" id="pJH-dP-syB"/>
-                        <outlet property="yellowColorView" destination="OXF-gU-4mS" id="jqj-5c-yqb"/>
+                        <outletCollection property="colorViews" destination="MOz-uS-tFU" collectionClass="NSMutableArray" id="YwU-jm-Rww"/>
+                        <outletCollection property="colorViews" destination="OXF-gU-4mS" collectionClass="NSMutableArray" id="WrY-2C-CIv"/>
+                        <outletCollection property="colorViews" destination="vCA-f6-QoI" collectionClass="NSMutableArray" id="Fe8-sc-MSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,21 +9,35 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var redColorView: UIView!
-    @IBOutlet var yellowColorView: UIView!
-    @IBOutlet var greenColorView: UIView!
+    
+    @IBOutlet var colorViews: [UIView]!
     @IBOutlet var functionalButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let views:[UIView] = [redColorView, yellowColorView, greenColorView]
-        
-        for view in views {
+        for view in colorViews {
             view.layer.cornerRadius = view.layer.frame.height / 2
             view.alpha = 0.3
         }
         functionalButton.layer.cornerRadius = 10
+    }
+    
+    @IBAction func functionalButtonTapped() {
+        
+        if functionalButton.currentTitle == "START" {
+            toggleStatus(colorViews[0])
+            functionalButton.setTitle("NEXT", for: .normal)
+        } else if colorViews[0].alpha == 1 {
+            toggleStatus(colorViews[0])
+            toggleStatus(colorViews[1])
+        } else if colorViews[1].alpha == 1 {
+            toggleStatus(colorViews[1])
+            toggleStatus(colorViews[2])
+        } else {
+            toggleStatus(colorViews[2])
+            toggleStatus(colorViews[0])
+        }
     }
     
     private func toggleStatus(_ view: UIView) {
@@ -33,22 +47,5 @@ class ViewController: UIViewController {
         } else {
             view.alpha = 0.3
         }
-    }
-    
-    @IBAction func functionalButtonTapped() {
-            
-            if functionalButton.currentTitle == "START" {
-                toggleStatus(redColorView)
-                functionalButton.setTitle("NEXT", for: .normal)
-            } else if redColorView.alpha == 1 {
-                toggleStatus(redColorView)
-                toggleStatus(yellowColorView)
-            } else if yellowColorView.alpha == 1 {
-                toggleStatus(yellowColorView)
-                toggleStatus(greenColorView)
-            } else {
-                toggleStatus(greenColorView)
-                toggleStatus(redColorView)
-            }
     }
 }
