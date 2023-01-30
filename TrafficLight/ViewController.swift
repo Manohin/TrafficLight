@@ -21,8 +21,6 @@ class ViewController: UIViewController {
         
         let views:[UIView] = [redColorView, yellowColorView, greenColorView]
         
-        //   views.map({ $0.layer.cornerRadius = 60 }) - Почему-то возникает ошибка "Result of call to 'map' is unused"
-        
         for view in views {
             view.layer.cornerRadius = view.layer.frame.height / 2
             view.alpha = 0.3
