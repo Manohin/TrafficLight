@@ -24,18 +24,22 @@ class ViewController: UIViewController {
     
     @IBAction func functionalButtonTapped() {
         
+        let redColorView = colorViews[0]
+        let yellowColorView = colorViews[1]
+        let greenColorView = colorViews[2]
+        
         if functionalButton.currentTitle == "START" {
-            toggleStatus(colorViews[0])
+            toggleStatus(redColorView)
             functionalButton.setTitle("NEXT", for: .normal)
-        } else if colorViews[0].alpha == 1 {
-            toggleStatus(colorViews[0])
-            toggleStatus(colorViews[1])
-        } else if colorViews[1].alpha == 1 {
-            toggleStatus(colorViews[1])
-            toggleStatus(colorViews[2])
+        } else if redColorView.alpha == 1 {
+            toggleStatus(redColorView)
+            toggleStatus(yellowColorView)
+        } else if yellowColorView.alpha == 1 {
+            toggleStatus(yellowColorView)
+            toggleStatus(greenColorView)
         } else {
-            toggleStatus(colorViews[2])
-            toggleStatus(colorViews[0])
+            toggleStatus(greenColorView)
+            toggleStatus(redColorView)
         }
     }
     
