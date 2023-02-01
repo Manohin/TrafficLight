@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet var colorViews: [UIView]!
+    
     @IBOutlet var functionalButton: UIButton!
     
     override func viewDidLoad() {
